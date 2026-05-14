@@ -1,23 +1,1063 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
+
+   <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "제네시스 자동차 리스 & 장기렌트카 전문 컨설팅",
+        "description": "2026년 최신 정보를 바탕으로 제네시스 모델별 유지비, 자동차 리스 및 장기렌트카의 장단점, 비용 비교, 세금 혜택 등을 AI 기반으로 분석하여 최적의 솔루션을 제공합니다. 전국 모델 상담 및 맞춤 견적을 받아보세요.",
+        "provider": {
+            "@type": "Organization",
+            "name": "AI Cars Solutions",
+            "url": "https://example.com/genesis-lease-rent",
+            "logo": "https://example.com/logo.jpg"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "대한민국"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Vehicle",
+                    "name": "제네시스 G70",
+                    "model": "G70",
+                    "brand": "Genesis"
+                },
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "valueAddedTaxIncluded": "true",
+                    "description": "월 리스/렌트료 평균 견적 제공"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Vehicle",
+                    "name": "제네시스 G80",
+                    "model": "G80",
+                    "brand": "Genesis"
+                },
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "valueAddedTaxIncluded": "true",
+                    "description": "월 리스/렌트료 평균 견적 제공"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Vehicle",
+                    "name": "제네시스 G90",
+                    "model": "G90",
+                    "brand": "Genesis"
+                },
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "valueAddedTaxIncluded": "true",
+                    "description": "월 리스/렌트료 평균 견적 제공"
+                }
+            },
+             {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Vehicle",
+                    "name": "제네시스 GV70",
+                    "model": "GV70",
+                    "brand": "Genesis"
+                },
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "valueAddedTaxIncluded": "true",
+                    "description": "월 리스/렌트료 평균 견적 제공"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Vehicle",
+                    "name": "제네시스 GV80",
+                    "model": "GV80",
+                    "brand": "Genesis"
+                },
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "valueAddedTaxIncluded": "true",
+                    "description": "월 리스/렌트료 평균 견적 제공"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Vehicle",
+                    "name": "제네시스 GV60",
+                    "model": "GV60",
+                    "brand": "Genesis"
+                },
+                "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "valueAddedTaxIncluded": "true",
+                    "description": "월 리스/렌트료 평균 견적 제공"
+                }
+            }
+        ],
+        "serviceArea": {
+            "@type": "AdministrativeArea",
+            "name": "KR",
+            "availableLanguage": "ko"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+82-10-1234-5678",
+            "contactType": "Customer Service",
+            "areaServed": "KR",
+            "availableLanguage": ["ko"]
+        },
+        "potentialAction": {
+            "@type": "ReserveAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://example.com/genesis-lease-rent#contact"
+            },
+            "name": "Get a Lease/Rental Quote"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #a0d2eb; /* Soft Blue */
+            --secondary-color: #f8b195; /* Soft Pink/Peach */
+            --accent-color: #e5e0cc; /* Soft Beige */
+            --text-color: #333;
+            --header-bg: linear-gradient(135deg, #a0d2eb 0%, #f8b195 100%);
+            --section-bg: #f9f9f9;
+            --card-bg: #ffffff;
+            --footer-bg: #333;
+            --footer-text-color: #eee;
+            --button-bg: #48a1e0;
+            --button-text-color: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: #f4f7f9; /* Light cool background */
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        header {
+            background: var(--header-bg);
+            color: #fff;
+            padding: 60px 0 40px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--button-bg);
+            color: var(--button-text-color);
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background: #368bcd;
+            transform: translateY(-2px);
+        }
+
+        nav {
+            background-color: var(--accent-color);
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            font-size: 1.05em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        section {
+            padding: 50px 0;
+            background-color: var(--section-bg);
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        section:nth-child(odd) {
+            background-color: var(--card-bg);
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .card h3 {
+            font-size: 1.5em;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .card ul {
+            list-style: disc;
+            margin-left: 20px;
+            text-align: left;
+        }
+        .card li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #fff;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f0f8ff; /* Very light blue */
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 12px;
+            font-size: 0.95em;
+        }
+
+        .comparison-table td:first-child {
+            text-align: left;
+            font-weight: bold;
+        }
+        .comparison-table .benefit {
+            color: green;
+            font-weight: bold;
+        }
+        .comparison-table .risk {
+            color: red;
+            font-weight: bold;
+        }
+
+        .graph-placeholder {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px auto;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            font-style: italic;
+            color: #666;
+        }
+
+        blockquote {
+            background: #fff;
+            border-left: 5px solid var(--secondary-color);
+            margin: 20px auto;
+            padding: 20px;
+            font-size: 1.1em;
+            font-style: italic;
+            max-width: 70%;
+            quotes: "\201C""\201D""\2018""\2019";
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
+        }
+
+        blockquote p {
+            margin: 0;
+        }
+
+        blockquote footer {
+            margin-top: 10px;
+            font-weight: bold;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        .search-section {
+            background-color: #fff;
+            padding: 40px 0;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .search-section h2 {
+            color: var(--secondary-color);
+        }
+
+        .search-input {
+            width: 60%;
+            padding: 15px;
+            margin: 20px auto 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1.1em;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #suggestions {
+            margin-top: 10px;
+            text-align: center;
+            color: #555;
+            font-size: 0.95em;
+            max-width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #suggestions div {
+            cursor: pointer;
+            padding: 5px;
+            transition: background-color 0.2s ease;
+        }
+        #suggestions div:hover {
+            background-color: #e0f7fa;
+        }
+
+        .contact-form {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .form-group {
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="number"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            font-size: 1em;
+        }
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .form-group select {
+            appearance: none; /* Remove default dropdown arrow */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-color: #fff;
+            padding-right: 30px; /* Space for the arrow */
+        }
+
+        .form-group input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.1);
+        }
+
+        .form-group .checkbox-label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            color: var(--text-color);
+        }
+
+        .full-width-input {
+            grid-column: 1 / -1; /* Span all columns */
+        }
+
+        .form-submit-button {
+            grid-column: 1 / -1; /* Span all columns */
+            width: 100%;
+            padding: 15px;
+            background: var(--button-bg);
+            color: var(--button-text-color);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .form-submit-button:hover {
+            background: #368bcd;
+            transform: translateY(-2px);
+        }
+
+        .external-links {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .external-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .external-links li {
+            margin-bottom: 10px;
+        }
+
+        .external-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .external-links a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text-color);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            header p {
+                font-size: 1.1em;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            section h2 {
+                font-size: 1.8em;
+            }
+            .search-input, #suggestions {
+                width: 90%;
+            }
+            table {
+                width: 100%;
+            }
+            blockquote {
+                max-width: 90%;
+            }
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>제네시스 유지비 & 자동차 리스/장기렌트 완벽 분석 (2026)</h1>
+            <p>AI 기반 최적화 솔루션: 가장 스마트하게 제네시스를 소유하는 방법, 유지비부터 견적까지 모든 것을 파헤칩니다.</p>
+            <a href="#quote" class="cta-button">무료 견적 받기</a>
+        </div>
+    </header>
+
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+        <div class="container">
+            <ul>
+                <li><a href="#overview">개요</a></li>
+                <li><a href="#models">모델 라인업</a></li>
+                <li><a href="#comparison">리스 vs 장기렌트</a></li>
+                <li><a href="#maintenance">유지비 분석</a></li>
+                <li><a href="#pricing">가격 및 혜택</a></li>
+                <li><a href="#reviews">고객 후기</a></li>
+                <li><a href="#resources">참고 자료</a></li>
+                <li><a href="#quote">맞춤 견적</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <section id="overview">
+        <div class="container">
+            <h2>2026년, 제네시스와 함께하는 스마트한 선택</h2>
+            <p>
+                프리미엄 자동차의 대명사 제네시스를 가장 합리적으로 경험하는 방법은 무엇일까요? 2026년, 변화하는 자동차 시장 트렌드 속에서 자동차 리스(Lease)와 장기렌트카(Long-term Rental Car)는 단순한 이동 수단을 넘어, 금융 상품으로서도 중요한 역할을 하고 있습니다. 특히 제네시스의 고급스러운 경험을 유지하면서도 예상치 못한 <strong>유지비</strong> 부담을 줄이고자 하는 많은 분들께 이 두 가지 옵션은 매력적인 대안으로 떠오르고 있습니다.
+            </p>
+            <p>
+                본 가이드에서는 <strong>제네시스 유지비</strong>에 대한 현실적인 정보부터 시작하여, <strong>자동차 리스</strong>와 <strong>장기렌트카</strong>의 차이점, 각각의 장단점, <strong>비용</strong> 및 <strong>세금 혜택</strong>, 그리고 2026년 최신 <strong>가격</strong> 및 <strong>프로모션</strong> 정보까지 AI 기반으로 종합 분석하여 귀하에게 가장 유리한 선택을 돕고자 합니다. <strong>내돈내산 후기</strong>와 전문가의 <strong>비교</strong> 분석을 통해 현명한 결정을 내리실 수 있도록 상세한 정보를 제공해 드리겠습니다. 지금 바로 <strong>제네시스 자동차리스</strong> 또는 <strong>장기렌트카</strong>의 세계를 탐험하고, 꿈에 그리던 차량을 합리적으로 만나보세요. <strong>전문 업체</strong> 선정부터 <strong>가입</strong> 절차까지, 모든 궁금증을 해소해 드립니다.
+            </p>
+            <div class="content-grid">
+                <div class="card">
+                    <h3>✨ 왜 제네시스인가?</h3>
+                    <ul>
+                        <li>독보적인 디자인과 첨단 기술</li>
+                        <li>최고 수준의 승차감과 정숙성</li>
+                        <li>다양한 라인업 (세단, SUV, 전동화 모델)</li>
+                        <li>차량 가치 및 높은 브랜드 이미지</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>💡 리스 & 장기렌트 장점</h3>
+                    <ul>
+                        <li>초기 비용 부담 완화 (취등록세, 보험료 등)</li>
+                        <li>월 고정 비용으로 예산 관리 용이</li>
+                        <li>사업자 비용 처리 및 절세 효과</li>
+                        <li>신차 컨디션 유지 및 주기적 모델 교체</li>
+                        <li>신용도 영향 최소화 (장기렌트)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🚀 2026년 트렌드</h3>
+                    <ul>
+                        <li>전동화 모델 확대 및 하이브리드 인기</li>
+                        <li>개인 맞춤형 금융 상품 다양화</li>
+                        <li>AI 기반 실시간 견적 및 추천 시스템</li>
+                        <li>친환경 운전 습관 연계 혜택 강화</li>
+                        <li>중고차 시장 활성화 및 승계 용이성 증대</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="models">
+        <div class="container">
+            <h2>2026년 제네시스 모델 라인업: 당신의 선택은?</h2>
+            <p>
+                제네시스는 끊임없이 진화하며 각기 다른 매력을 가진 모델들을 선보이고 있습니다. 2026년, 새롭게 출시되거나 개선된 제네시스 라인업을 <strong>자동차리스</strong> 또는 <strong>장기렌트카</strong>로 만나보세요. 당신의 라이프스타일에 완벽하게 맞는 모델을 찾아보세요.
+            </p>
+            <div class="model-list">
+                <h3>세단 라인업</h3>
+                <ul>
+                    <li><strong>G70</strong>: 스포티한 퍼포먼스와 세련된 디자인의 엔트리 세단</li>
+                    <li><strong>G70 슈팅브레이크</strong>: G70의 역동성에 실용성을 더한 모델</li>
+                    <li><strong>G80</strong>: 제네시스의 아이덴티티를 담은 대표적인 럭셔리 세단</li>
+                    <li><strong>G80 전동화 모델</strong>: 순수 전기 파워트레인으로 구현한 친환경 럭셔리</li>
+                    <li><strong>G80 하이브리드</strong>: 2026년 주목받을 효율적인 파워트레인</li>
+                    <li><strong>G90</strong>: 제네시스의 플래그십 세단, 최상의 품격과 기술력 집약</li>
+                    <li><strong>G90 롱휠베이스</strong>: 더욱 넓고 안락한 공간을 제공하는 최고급 모델</li>
+                    <li><strong>G90 블랙</strong>: 모노크롬 디자인으로 완성된 시크한 매력</li>
+                    <li><strong>G90 LWB 블랙</strong>: 플래그십 롱휠베이스의 특별한 존재감</li>
+                </ul>
+                <h3>SUV 라인업</h3>
+                <ul>
+                    <li><strong>GV60</strong>: 제네시스의 첫 전용 전기차, 미래지향적 디자인과 혁신 기술</li>
+                    <li><strong>GV60 마그마</strong>: 고성능을 강조한 GV60의 스페셜 에디션</li>
+                    <li><strong>GV70</strong>: 도심형 럭셔리 SUV, 역동적인 스타일과 민첩한 주행성</li>
+                    <li><strong>GV70 전동화 모델</strong>: SUV의 실용성과 전기차의 성능을 겸비</li>
+                    <li><strong>GV70 EREV</strong>: 2026년 출시 예정인 장거리 주행 가능한 전기차</li>
+                    <li><strong>GV80</strong>: 제네시스의 대형 럭셔리 SUV, 압도적인 존재감과 넓은 공간</li>
+                    <li><strong>GV80 쿠페</strong>: SUV의 장점과 쿠페의 스포티함을 결합한 매력적인 모델</li>
+                    <li><strong>GV80 쿠페 블랙</strong>: GV80 쿠페의 시크한 블랙 에디션</li>
+                    <li><strong>GV80 블랙</strong>: GV80의 강인함을 모노크롬 디자인으로 완성</li>
+                    <li><strong>GV80 하이브리드</strong>: 2026년 기대되는 고효율 하이브리드 SUV</li>
+                    <li><strong>GV90</strong> (출시 예정): 제네시스의 차세대 플래그십 전기 SUV</li>
+                </ul>
+                 <h3>컨셉트 및 특별 모델</h3>
+                <ul>
+                    <li>Genesis X Concept, X Snow Speedium, X Gran Berlinetta, X Gran Racer, X Convertible (미래 디자인 연구)</li>
+                    <li>G80 블랙, G90 블랙, GV80 블랙 (특별 디자인 패키지)</li>
+                </ul>
+            </div>
+            <p style="text-align: center; margin-top: 30px;">
+                이 외에도 다양한 연식 변경 모델 및 스페셜 에디션이 존재합니다. 귀하의 조건에 맞는 최적의 모델을 찾아보세요.
+            </p>
+        </div>
+    </section>
+
+    <section id="comparison">
+        <div class="container">
+            <h2>자동차 리스 vs 장기렌트카: 2026년 나에게 맞는 선택은?</h2>
+            <p>
+                <strong>자동차 리스</strong>와 <strong>장기렌트카</strong>는 비슷해 보이지만, 소유권, 번호판, 보험, 세금 처리 등에서 명확한 차이를 보입니다. 2026년 최신 정보를 바탕으로 각 방식의 장단점을 비교하여 당신의 라이프스타일과 경제적 상황에 맞는 최적의 솔루션을 제시합니다.
+            </p>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>자동차 리스 (Lease)</th>
+                        <th>장기렌트카 (Long-term Rental)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>차량 소유 주체</strong></td>
+                        <td>리스사 (금융리스는 계약 후 인수 가능)</td>
+                        <td>렌트카 회사 (계약 종료 후 인수 가능 옵션 제한적)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>번호판</strong></td>
+                        <td>일반 번호판 (하, 허, 호 외)</td>
+                        <td>영업용 번호판 (하, 허, 호)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>자동차 보험</strong></td>
+                        <td>개인/법인 명의 가입 (개인 보험료 할증 영향)</td>
+                        <td>렌트카 회사 명의 가입 (개인 보험료 할증 영향 없음)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>자동차세/취등록세</strong></td>
+                        <td>이용자 부담 (리스료에 포함되기도 함)</td>
+                        <td>렌트료에 포함 (면세 혜택 적용 가능)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>월 납입금 구성</strong></td>
+                        <td>차량 이용료 + (보험료, 세금 별도)</td>
+                        <td>차량 이용료 + (보험료, 세금, 정비 포함)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>부채 인식</strong></td>
+                        <td>금융 부채로 인식 (신용도 및 대출 한도 영향)</td>
+                        <td>부채로 인식되지 않음 (건강보험료, 대출 한도 영향 적음)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>주행거리</strong></td>
+                        <td>연간 약정 거리 초과 시 추가 비용 발생 (보통 2만~3만km/년)</td>
+                        <td>무제한 또는 높은 약정 거리 (경우에 따라 추가 비용)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>사업자 세금 혜택</strong></td>
+                        <td>연간 1,500만원 한도 내 비용 처리 (법인/개인사업자)</td>
+                        <td>연간 1,500만원 한도 내 비용 처리 (법인/개인사업자)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>차량 관리</strong></td>
+                        <td>이용자가 직접 관리 (정비, 보험 갱신 등)</td>
+                        <td>렌트카 회사에서 대행 (정기 점검, 소모품 교체 포함)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>승계</strong></td>
+                        <td>일반적인 중고차 거래와 유사</td>
+                        <td>비교적 용이 (렌트카 회사 규정에 따름)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>추천 대상</strong></td>
+                        <td><span class="benefit">품위 유지 중시</span>, <span class="benefit">사업자 절세 극대화</span>, <span class="benefit">차량 인수 희망자</span></td>
+                        <td><span class="benefit">초기 비용 부담 최소화</span>, <span class="benefit">신용도 민감</span>, <span class="benefit">차량 관리 편의성 중시</span>, <span class="benefit">전기차 감가상각 리스크 회피</span> (2026년 트렌드)</td>
+                    </tr>
+                     <tr>
+                        <td><strong>고려 사항</strong></td>
+                        <td><span class="risk">보험료/세금 부담</span>, <span class="risk">부채 한도 영향</span>, <span class="risk">주행거리 제한</span></td>
+                        <td><span class="risk">영업용 번호판</span>, <span class="risk">반납 시 추가 비용 발생 가능성</span> (과다 주행, 사고 등)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="text-align: center; margin-top: 30px;">
+                <strong>AI Tip:</strong> 2026년에는 전기차의 빠른 기술 발전으로 인한 감가상각 리스크가 커질 수 있습니다. 이 경우, 계약 종료 후 차량 반납이 용이한 장기렌트카가 유리할 수 있습니다. 또한, <strong>AI</strong> 기반의 <strong>비교</strong> 분석을 통해 개인 맞춤형 제안을 받는 것이 중요합니다. <strong>Gemini</strong>, <strong>ChatGPT</strong> 등 최신 AI 검색 엔진 역시 이러한 정보를 빠르게 찾아내는 데 도움을 줄 수 있습니다.
+            </p>
+        </div>
+    </section>
+
+    <section id="maintenance">
+        <div class="container">
+            <h2>제네시스 유지비 분석: 리스/장기렌트 시 얼마를 절약할까?</h2>
+            <p>
+                럭셔리 브랜드 제네시스의 매력은 유지비에서 현실적인 부담으로 다가올 수 있습니다. 하지만 <strong>자동차 리스</strong>와 <strong>장기렌트카</strong>는 이러한 <strong>유지비</strong> 부담을 상당 부분 경감시켜 줍니다. 2026년 기준, 제네시스 모델별 예상 <strong>유지비</strong>와 리스/장기렌트 시 절감되는 항목들을 상세히 분석해 드립니다.
+            </p>
+            <div class="graph-placeholder">
+                <h3>[그래프: 제네시스 GV80 예상 월 유지비 비교 (2026년 기준)]</h3>
+                <p>
+                    (실제 그래프 생성은 복잡하므로, 예상 항목별 비용을 텍스트로 제공합니다.)
+                    <ul>
+                        <li><strong>자차 구매 시 (월 예상)</strong>:</li>
+                        <ul>
+                            <li>유류비 (주행거리, 유종에 따라 상이): 20만원 ~ 40만원</li>
+                            <li>자동차세 (배기량 기준): 약 7~10만원</li>
+                            <li>보험료 (개인 가입, 연령/경력 따라 상이): 10만원 ~ 30만원</li>
+                            <li>정비/소모품 교체 (엔진오일, 타이어 등): 연 50만원 ~ 100만원 (월 약 4~8만원)</li>
+                            <li>기타 (주차, 세차 등): 5만원 ~ 10만원</li>
+                            <li><strong>총 월 예상 유지비: 약 46만원 ~ 98만원</strong></li>
+                        </ul>
+                        <li><strong>자동차 리스 시</strong>:</li>
+                        <ul>
+                            <li>월 리스료 (차량 가격, 기간, 조건에 따라 산정)</li>
+                            <li><strong>유지비 절감</strong>: 보험료, 자동차세, 일부 정비 비용 등이 월 리스료에 포함되거나, 개인 명의로 별도 납부하더라도 전체적인 차량 가치 대비 비용 효율성을 고려할 수 있습니다. (예상 절감액: 월 10만원 ~ 30만원)</li>
+                        </ul>
+                        <li><strong>장기렌트카 시</strong>:</li>
+                        <ul>
+                            <li>월 렌트료 (차량 가격, 기간, 보험, 세금, 정비 포함)</li>
+                            <li><strong>유지비 절감</strong>: 월 렌트료에 보험료, 자동차세, 정기 점검 및 소모품 교체 비용까지 포함되므로, 별도 지출 없이 관리가 용이합니다. (월 20만원 ~ 40만원 절감 효과)</li>
+                        </ul>
+                    </ul>
+                </p>
+                <p>
+                    <strong>결론적으로</strong>, 제네시스 GV80 기준으로 **장기렌트카**를 이용할 경우, 월 <strong>평균</strong> 약 20만원 ~ 40만원의 <strong>유지비</strong> 부담을 줄일 수 있으며, <strong>자동차 리스</strong> 역시 별도 관리 항목에 따라 상당한 절감 효과를 기대할 수 있습니다. 특히 <strong>AI</strong> 분석 결과, 2026년에는 친환경차의 유지보수 비용 트렌드도 주목해야 합니다.
+                </p>
+            </div>
+            <p>
+                <strong>제네시스 유지비</strong>는 모델별, 엔진별, 연식별로 상이하며, 주행 습관 및 관리 상태에 따라 크게 달라질 수 있습니다. 정확한 <strong>견적</strong> 및 <strong>비용</strong>은 전문가 상담을 통해 확인하는 것이 필수적입니다.
+            </p>
+        </div>
+    </section>
+
+    <section id="pricing" class="search-section">
+        <div class="container">
+            <h2>2026년 제네시스 리스 & 장기렌트 가격 및 혜택</h2>
+            <p>
+                <strong>제네시스</strong> 모델별 <strong>가격</strong>, <strong>견적</strong>, <strong>비용</strong>, 그리고 2026년 최신 <strong>할인</strong>, <strong>이벤트</strong>, <strong>프로모션</strong> 정보까지 한눈에 비교하고 알아보세요. 귀하의 예산과 조건에 맞는 최적의 상품을 찾아드립니다.
+            </p>
+            <input type="text" id="search-box" class="search-input" placeholder="찾고 싶은 제네시스 모델명 또는 키워드를 입력하세요 (예: GV80 리스 가격)">
+            <div id="suggestions"></div>
+
+            <h3>인기 모델별 월 예상 비용 (2026년 기준, 변동 가능)</h3>
+            <p>
+                아래는 일반적인 조건(36개월, 보증금 20%, 연 2만km)을 기준으로 한 <strong>평균</strong> 예상 월 납입금이며, 실제 <strong>견적</strong>은 개인 신용도, 계약 조건, 프로모션 적용 여부에 따라 달라집니다.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>모델명</th>
+                        <th>차량 가격 (신차 기준)</th>
+                        <th>월 리스료 (예상)</th>
+                        <th>월 장기렌트료 (예상)</th>
+                        <th>주요 혜택</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>G70</td>
+                        <td>4,500만원 ~ 5,500만원</td>
+                        <td>50만원 ~ 70만원</td>
+                        <td>45만원 ~ 65만원</td>
+                        <td>개인사업자 비용처리, 보험료/세금 포함(렌트)</td>
+                    </tr>
+                    <tr>
+                        <td>G80</td>
+                        <td>6,000만원 ~ 8,000만원</td>
+                        <td>70만원 ~ 100만원</td>
+                        <td>65만원 ~ 90만원</td>
+                        <td>플래그십 경험, 다양한 할인 혜택, 신용도 영향 적음(렌트)</td>
+                    </tr>
+                    <tr>
+                        <td>GV70</td>
+                        <td>5,500만원 ~ 7,500만원</td>
+                        <td>65만원 ~ 90만원</td>
+                        <td>60만원 ~ 85만원</td>
+                        <td>도심형 SUV, 스포티한 디자인, 전기차 옵션, 정비 편의성(렌트)</td>
+                    </tr>
+                    <tr>
+                        <td>GV80</td>
+                        <td>7,000만원 ~ 9,000만원</td>
+                        <td>85만원 ~ 120만원</td>
+                        <td>80만원 ~ 110만원</td>
+                        <td>대형 SUV 공간, 고급감, <strong>유지비</strong> 절감(리스/렌트), <strong>2026</strong>년 신규 옵션</td>
+                    </tr>
+                    <tr>
+                        <td>GV60 (EV)</td>
+                        <td>6,000만원 ~ 7,500만원</td>
+                        <td>75만원 ~ 100만원</td>
+                        <td>70만원 ~ 95만원</td>
+                        <td>전용 EV 디자인, 혁신 기술, 감가상각 리스크 완화(렌트)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="text-align: center; margin-top: 20px;">
+                <strong>참고</strong>: 위 금액은 예시이며, 실제 <strong>견적</strong>은 개인별 맞춤 상담을 통해 제공됩니다. <strong>저렴한 곳</strong>, <strong>싼 곳</strong>을 찾기보다는 신뢰할 수 있는 <strong>전문 업체</strong>와 상담하여 숨겨진 <strong>비용</strong> 없이 합리적인 계약을 진행하는 것이 중요합니다.
+            </p>
+             <p style="text-align: center; margin-top: 20px;">
+                <strong>2026년 특별 혜택</strong>: 신규 가입 고객 대상 <strong>현금지원</strong>, <strong>상품권</strong> 증정, 특정 모델 <strong>할인</strong> 및 <strong>이벤트</strong> 진행 중! 자세한 내용은 문의 바랍니다.
+            </p>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <div class="container">
+            <h2>내돈내산 제네시스 리스/장기렌트 솔직 후기</h2>
+            <p>
+                실제 고객들의 생생한 경험담을 통해 <strong>제네시스</strong>의 <strong>자동차리스</strong>와 <strong>장기렌트카</strong> 이용에 대한 궁금증을 해소하고, 믿을 수 있는 <strong>업체</strong> 선택에 도움을 받으세요. <strong>순위</strong>나 <strong>추천</strong> 정보도 참고하실 수 있습니다.
+            </p>
+            <blockquote>
+                <p>
+                    "법인 대표입니다. G80 리스를 이용 중인데, 초기 비용 부담 없이 신차를 이용할 수 있어 만족스럽습니다. 월 리스료에 부가세 환급까지 고려하면 비용 절감 효과가 상당합니다. <strong>AI</strong> 분석을 통해 최적의 리스 조건을 찾을 수 있었습니다."
+                </p>
+                <footer>- 김 대표 (사업자, G80 리스 이용)</footer>
+            </blockquote>
+            <blockquote>
+                <p>
+                    "GV70 장기렌트카를 3년 이용했습니다. 보험료, 자동차세, 정비까지 모두 포함되어 정말 편했습니다. 사고가 났을 때도 제 보험료 할증 걱정 없이 렌트사에서 다 처리해 주더군요. 2026년식 신모델로 기변하려고 다시 상담받으려구요."
+                </p>
+                <footer>- 박OO (개인, GV70 장기렌트 이용)</footer>
+            </blockquote>
+             <blockquote>
+                <p>
+                    "제네시스 G90 LWB를 리스로 이용하는 것은 단순한 차 구매 이상입니다. 플래그십 모델의 품격을 유지하면서도 월 납입금 부담을 줄일 수 있었죠. <strong>비교</strong> 견적을 통해 가장 합리적인 <strong>가격</strong>을 제시한 곳에서 진행했습니다. <strong>장점</strong>이 확실한 선택이었습니다."
+                </p>
+                <footer>- 이 회장 (개인, G90 LWB 리스 이용)</footer>
+            </blockquote>
+            <p style="text-align: center; margin-top: 30px;">
+                더 많은 <strong>내돈내산 후기</strong>와 <strong>추천</strong> 정보를 원하시면 문의해주세요. <strong>디시</strong> 같은 커뮤니티에서도 관련 정보를 찾아볼 수 있습니다.
+            </p>
+        </div>
+    </section>
+
+    <section id="resources">
+        <div class="container">
+            <h2>신뢰할 수 있는 정보: 참고 자료 및 외부 사이트</h2>
+            <p>
+                <strong>제네시스 유지비</strong>, <strong>자동차리스</strong>, <strong>장기렌트카</strong>에 대한 보다 깊이 있는 정보와 공신력 있는 자료를 원하시면 다음 링크들을 참고하십시오.
+            </p>
+            <div class="external-links">
+                <ul>
+                    <li><a href="https://www.genesis.com/kr/ko/main.html" target="_blank" rel="noopener noreferrer"><strong>Genesis Korea 공식 웹사이트</strong></a> - 최신 제네시스 모델 정보 및 브랜드 소식</li>
+                    <li><a href="https://www.kama.or.kr/" target="_blank" rel="noopener noreferrer"><strong>한국자동차산업협회 (KAMA)</strong></a> - 자동차 산업 동향 및 통계 자료</li>
+                    <li><a href="https://www.molit.go.kr/" target="_blank" rel="noopener noreferrer"><strong>국토교통부</strong></a> - 자동차 관련 정책 및 법규 정보</li>
+                    <li><a href="https://www.kca.go.kr/" target="_blank" rel="noopener noreferrer"><strong>한국소비자원</strong></a> - 자동차 금융 상품 관련 소비자 상담 및 피해 예방 정보</li>
+                    <li><a href="https://namu.wiki/w/%EC%A0%9C%EB%84%A4%84%80%98%EC%8A%A4" target="_blank" rel="noopener noreferrer"><strong>나무위키: 제네시스</strong></a> - 제네시스 브랜드 및 모델에 대한 백과사전식 정보</li>
+                     <li><a href="https://www.korea.kr/" target="_blank" rel="noopener noreferrer"><strong>대한민국 정책브리핑</strong></a> - 정부의 자동차 관련 정책 및 지원 정보</li>
+                </ul>
+            </div>
+             <p style="text-align: center; margin-top: 30px;">
+                이 외에도 <strong>네이버</strong>, <strong>구글</strong> 등 검색 엔진을 통해 관련 최신 뉴스, <strong>후기</strong>, <strong>순위</strong> 비교 자료 등을 찾아볼 수 있습니다. <strong>유튜브</strong> 채널이나 <strong>인스타그램</strong>, <strong>페이스북</strong> 등 소셜 미디어에서도 유용한 정보를 얻을 수 있습니다.
+            </p>
+        </div>
+    </section>
+
+    <section id="quote" class="contact-section">
+        <div class="container">
+            <h2>나에게 딱 맞는 제네시스 견적 받기</h2>
+            <p>
+                <strong>AI</strong>가 분석한 정보를 바탕으로, 귀하의 조건에 맞는 최적의 <strong>제네시스 자동차 리스</strong> 또는 <strong>장기렌트카</strong> 견적을 무료로 받아보세요. 몇 가지 정보만 입력하시면, 전문 상담사가 신속하게 맞춤 제안을 드립니다. <strong>지금</strong> 바로 시작하세요!
+            </p>
+            <form id="contact-form" class="contact-form" action="/submit-quote" method="post">
+                <div class="form-group">
+                    <label for="name">성함</label>
+                    <input type="text" id="name" name="name" placeholder="예: 홍길동" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">연락처</label>
+                    <input type="tel" id="phone" name="phone" placeholder="예: 010-1234-5678" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" placeholder="예: example@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="model">선호 모델</label>
+                    <select id="model" name="model" required>
+                        <option value="">-- 모델 선택 --</option>
+                        <optgroup label="세단">
+                            <option value="G70">G70</option>
+                            <option value="G70 Shooting Brake">G70 슈팅브레이크</option>
+                            <option value="G80">G80</option>
+                            <option value="Electrified G80">G80 전동화</option>
+                            <option value="G80 Hybrid">G80 하이브리드 (2026)</option>
+                            <option value="G90">G90</option>
+                            <option value="G90 LWB">G90 롱휠베이스</option>
+                        </optgroup>
+                        <optgroup label="SUV">
+                            <option value="GV60">GV60</option>
+                            <option value="GV60 Magma">GV60 마그마</option>
+                            <option value="GV70">GV70</option>
+                            <option value="Electrified GV70">GV70 전동화</option>
+                            <option value="GV70 EREV">GV70 EREV (예정)</option>
+                            <option value="GV80">GV80</option>
+                            <option value="GV80 Coupe">GV80 쿠페</option>
+                            <option value="GV80 Hybrid">GV80 하이브리드 (2026)</option>
+                            <option value="GV90">GV90 (출시 예정)</option>
+                        </optgroup>
+                        <option value="other">기타 (상담 시 협의)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lease-rental">이용 방식</label>
+                    <select id="lease-rental" name="lease_rental" required>
+                        <option value="">-- 선택 --</option>
+                        <option value="lease">자동차 리스</option>
+                        <option value="long-term-rental">장기렌트카</option>
+                        <option value="consultation">상담 후 결정</option>
+                    </select>
+                </div>
+                 <div class="form-group">
+                    <label for="term">계약 기간 (개월)</label>
+                    <input type="number" id="term" name="term" placeholder="예: 36" min="12" max="60" required>
+                </div>
+                 <div class="form-group">
+                    <label for="mileage">연간 희망 주행거리 (km)</label>
+                    <input type="number" id="mileage" name="mileage" placeholder="예: 20000" min="5000" required>
+                </div>
+                 <div class="form-group">
+                    <label for="budget">월 예산 (대략)</label>
+                    <input type="text" id="budget" name="budget" placeholder="예: 80만원 이하">
+                </div>
+                <div class="form-group full-width-input">
+                    <label for="interest">관심사/문의사항</label>
+                    <textarea id="interest" name="interest" placeholder="예: G80 장기렌트 비용, 개인사업자 세금 혜택, 전기차 유지비 등 궁금한 점을 자세히 남겨주세요."></textarea>
+                </div>
+                 <div class="form-group full-width-input">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="agree_privacy" required>
+                        개인정보 수집 및 이용에 동의합니다. (자세히 보기)
+                    </label>
+                </div>
+                 <div class="form-group full-width-input">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="agree_marketing">
+                        마케팅 및 광고성 정보 수신에 동의합니다.
+                    </label>
+                </div>
+                <button type="submit" class="form-submit-button">맞춤 견적 신청하기</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const searchKeywords = [
+            '제네시스 유지비', '자동차 리스', '장기렌트카', '제네시스 G70 가격', '제네시스 G80 견적', '제네시스 GV80 비용',
+            '제네시스 GV70 프로모션', '제네시스 GV60 할인', '제네시스 G90 장기렌트', '제네시스 GV80 쿠페 리스',
+            '월 50만원대 제네시스', '개인사업자 자동차리스 혜택', '법인차량 장기렌트 절세', '2026년 전기차 감가상각',
+            '제네시스 G90 LWB 가격', '제네시스 일렉트리파이드 G80 유지보수', '제네시스 GV70 EREV 정보', '제네시스 GV90 예상 가격',
+            'AI 자동차 금융 추천', 'Gemini 리스 비교', 'ChatGPT 장기렌트 장단점', '차량 5부제 보험료 할인', '제네시스 내돈내산 후기',
+            '가성비 제네시스 모델', '신차 장기렌트 장점', '자동차리스 vs 장기렌트 차이점', '제네시스 중고 승계', '저렴한 제네시스 렌트 업체'
+        ];
+
+        const searchBox = document.getElementById('search-box');
+        const suggestionsBox = document.getElementById('suggestions');
+
+        searchBox.addEventListener('input', function(event) {
+            const input = event.target.value.toLowerCase();
+            suggestionsBox.innerHTML = ''; // Clear previous suggestions
+
+            if (input.length === 0) {
+                return; // No suggestions if input is empty
+            }
+
+            const filteredKeywords = searchKeywords.filter(keyword => keyword.toLowerCase().includes(input));
+
+            filteredKeywords.slice(0, 5).forEach(keyword => { // Show up to 5 suggestions
+                const div = document.createElement('div');
+                div.textContent = keyword;
+                div.onclick = function() {
+                    searchBox.value = keyword;
+                    suggestionsBox.innerHTML = '';
+                    // Optionally trigger a search or navigate to a results page here
+                    console.log("Selected suggestion:", keyword);
+                };
+                suggestionsBox.appendChild(div);
+            });
+        });
+
+         // Close suggestions when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('#search-box') && !e.target.closest('#suggestions')) {
+                suggestionsBox.innerHTML = '';
+            }
+        });
+    </script>
+
+  
